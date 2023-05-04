@@ -1,0 +1,5 @@
+{
+    "port": 5050,
+    "mongodbUrl": "mongodb://localhost:27017/crm_DB?authMechanism=DEFAULT&authSource=crm_DB",
+    "jwt_key": "qwerty"
+}
