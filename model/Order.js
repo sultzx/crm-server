@@ -8,6 +8,11 @@ const schema = new mongoose.Schema({
     title: String,
     description: String,
     deadline: String,
+    files: [{
+        type: Object,
+        name: String,
+        url: String
+    }],
     performer: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User'
