@@ -142,7 +142,7 @@ export const signin = async (req, res) => {
   
   export const update = async (req, res) => {
     try {
-        const {lastname, firstname, patronymic, phone, gender, birthday, bio, organization} = req.body
+        const {lastname, firstname, patronymic, phone, gender, birthday, bio, job, organization} = req.body
         
         console.log({lastname, firstname, patronymic, phone, gender, birthday, bio, organization})
 
@@ -153,7 +153,7 @@ export const signin = async (req, res) => {
         await User.updateOne({
             _id: user._id,
         }, {
-          lastname, firstname, patronymic, phone, gender, birthday, bio, organization: {
+          lastname, firstname, patronymic, phone, gender, birthday, bio, job, organization: {
             name: organization
           }
         })

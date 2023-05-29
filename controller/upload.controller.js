@@ -31,6 +31,7 @@ export const uploadFile = async (req, res) => {
 }
 
 export const uploadOrder = async (req, res) => {
+    
     const url = `/uploads/orders/${req.file.filename}`
 
     const id = req.params.id

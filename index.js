@@ -9,6 +9,7 @@ import orderRouter from './route/order.route.js'
 import chatRouter from './route/chat.route.js'
 import departmentRouter from './route/department.route.js'
 import projectRouter from './route/project.route.js'
+import reportRouter from './route/report.route.js'
 
 const app = express()
 
@@ -36,6 +37,7 @@ const start = async () => {
     app.use('/api/chat', chatRouter)
     app.use('/api/department', departmentRouter)
     app.use('/api/project', projectRouter)
+    app.use('/api/report', reportRouter)
 
     app.listen(PORT, (error) => {
         if(error) {

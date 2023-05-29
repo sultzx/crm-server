@@ -13,6 +13,7 @@ const schema = new mongoose.Schema({
     birthday: Date,
     gender: String,
     bio: String,
+    job: String,
     organization: {
         type: Object,
         name: String,

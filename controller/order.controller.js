@@ -37,3 +37,25 @@ export const all = async (req, res) => {
         })
     }
 }
+
+export const setStatus = async (req, res) => {
+    try {
+        
+        const {orderId, status} = req.body
+
+        await Order.updateOne({
+            _id: orderId
+        }, {
+            status: status
+        })
+
+        res.status(200).json({
+            message: 'Тапсырыс дәрежесі өзгерді'
+        })
+
+    } catch (error) {
+        res.status(500).json({
+            message: 'Серверден қате келді'
+        })
+    }
+}
